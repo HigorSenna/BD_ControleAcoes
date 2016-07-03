@@ -64,7 +64,7 @@ CREATE TABLE `contas_bancarias` (
   `NUM_CONTA` int(11) NOT NULL,
   `SALDO` double(7,2) NOT NULL,
   PRIMARY KEY (`ID_CONTA`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `contas_bancarias` (
 
 LOCK TABLES `contas_bancarias` WRITE;
 /*!40000 ALTER TABLE `contas_bancarias` DISABLE KEYS */;
-INSERT INTO `contas_bancarias` VALUES (1,'a','a',0,114.20),(2,'c','c',0,533.79),(3,'g','g',0,52966.66),(4,'s','s',0,9369.40);
+INSERT INTO `contas_bancarias` VALUES (1,'a','a',0,45792.87),(2,'c','c',0,533.79),(3,'g','g',0,52966.66),(4,'s','s',0,9369.40),(5,'9818','asd',187,500.00),(6,'asda','asdasdas',4504,500.00),(7,'050','Brasil',5181,500.00),(11,'6878','sdfsdfsdf',456767,5000.00);
 /*!40000 ALTER TABLE `contas_bancarias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,13 +120,13 @@ CREATE TABLE `investidores` (
   `LOGIN` varchar(45) DEFAULT NULL,
   `NM_INVESTIDOR` varchar(40) DEFAULT NULL,
   `profissao` varchar(45) DEFAULT NULL,
-  `RG` varchar(12) DEFAULT NULL,
+  `RG` varchar(15) DEFAULT NULL,
   `SENHA` varchar(45) DEFAULT NULL,
   `ID_CONTA` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID_INVESTIDOR`),
   KEY `FK_1gqsavop4wnfda7j4ba0515sg` (`ID_CONTA`),
   CONSTRAINT `FK_1gqsavop4wnfda7j4ba0515sg` FOREIGN KEY (`ID_CONTA`) REFERENCES `contas_bancarias` (`ID_CONTA`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,7 +135,7 @@ CREATE TABLE `investidores` (
 
 LOCK TABLES `investidores` WRITE;
 /*!40000 ALTER TABLE `investidores` DISABLE KEYS */;
-INSERT INTO `investidores` VALUES (2,'0','a','a','a','a','a',1),(3,'0','c','Teste','c','c','c',2),(4,'0','g','gg','gg','gg','g',3),(5,'0','s','a','s','s','s',4);
+INSERT INTO `investidores` VALUES (2,'0','a','a','a','a','a',1),(3,'0','c','Teste','c','c','c',2),(4,'0','g','gg','gg','gg','g',3),(5,'0','s','a','s','s','s',4),(6,'98498489498','asdasd','sds','asdasd','sadasd','asdasd',5),(7,'518.919.811-98','dasdasd','asdasdasd','dasdasdas','asdasdasdas','asdasdas',6),(8,'519.811.119-81','admin','admin','Adm do sistema','saa','admin',7),(9,'651.495.108-17','asdasdas','asdasdasdas','asdasdas','MG-13.269.87','dasdasd',11);
 /*!40000 ALTER TABLE `investidores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,4 +179,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-21 23:35:31
+-- Dump completed on 2016-07-02 21:30:42
